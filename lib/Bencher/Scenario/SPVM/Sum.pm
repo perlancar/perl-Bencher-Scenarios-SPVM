@@ -27,3 +27,11 @@ sub sum { $_[0] + $_[1] }
 
 1;
 # ABSTRACT:
+
+=head1 BENCHMARK NOTES
+
+Because SPVM needs to run code at CHECK phase, we need to run with e.g.:
+
+ % PERL5OPT=-MSPVM=Examples::Sum bencher ...
+
+And building this dist also needs similar workaround.
