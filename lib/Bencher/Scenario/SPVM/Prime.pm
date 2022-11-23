@@ -4,7 +4,6 @@ use 5.010001;
 use strict;
 use warnings;
 
-use My::Inline;
 use SPVM 'Examples::Prime';
 
 # AUTHORITY
@@ -19,13 +18,14 @@ our $scenario = {
         'SPVM::Examples' => {}, # to pull dependency
     },
     participants => [
-        { name => 'Inline::C', code => sub { My::Inline::is_prime(1_000_003) } },
+        { name => 'Inline::C', code => sub { My::Prime::Inline::is_prime(1_000_003) } },
         { name => 'Perl',      code => sub { My::Prime->is_prime(1_000_003) } },
         { name => 'SPVM',      code => sub { SPVM::Examples::Prime->is_prime(1_000_003) } },
     ],
 };
 
-package My::Prime;
+package
+    My::Prime;
 
 sub is_prime {
     my $self = shift;
@@ -37,6 +37,20 @@ sub is_prime {
     }
     1;
 }
+
+package
+    My::Prime::Inline;
+
+use Inline C => <<'_';
+int is_prime(int num) {
+  int limit = num - 1; /* a naive algorithm */
+  int i;
+  for (i=2; i<=limit; i++) {
+    if (num % i == 0) return 1;
+  }
+  return 0;
+}
+_
 
 1;
 # ABSTRACT:
