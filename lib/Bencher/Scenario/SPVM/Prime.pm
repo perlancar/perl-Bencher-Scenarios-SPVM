@@ -13,9 +13,9 @@ use SPVM 'Examples::Prime';
 # VERSION
 
 our $scenario = {
-    summary => 'Benchmark SPVM (sum two numbers)',
+    summary => 'Benchmark SPVM (check if number is prime)',
     modules => {
-        'SPVM' => {version => '0.0238'},
+        'SPVM' => {version => '0.9662'},
         'SPVM::Examples' => {}, # to pull dependency
     },
     participants => [
