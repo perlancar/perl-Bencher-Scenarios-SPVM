@@ -15,7 +15,7 @@ our $scenario = {
     summary => 'Benchmark SPVM (check if number is prime)',
     modules => {
         'SPVM' => {version => '0.9662'},
-        'SPVM::Examples' => {}, # to pull dependency
+        'SPVM::Examples' => {version=>'0.002'}, # to pull dependency
     },
     participants => [
         { name => 'Inline::C', code => sub { My::Prime::Inline::is_prime(1_000_003) } },
