@@ -46,9 +46,9 @@ int is_prime(int num) {
   int limit = num - 1; /* a naive algorithm */
   int i;
   for (i=2; i<=limit; i++) {
-    if (num % i == 0) return 1;
+    if (num % i == 0) return 0;
   }
-  return 0;
+  return 1;
 }
 _
 
