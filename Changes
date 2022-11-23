@@ -1,3 +1,8 @@
+0.004   2022-11-23  Released-By: PERLANCAR; Urgency: low
+
+        - Tweak Abstract and require latest SPVM version.
+
+
 0.003   2022-11-23  Released-By: PERLANCAR; Urgency: medium
 
         - Update benchmark, replace Sum with Prime.
