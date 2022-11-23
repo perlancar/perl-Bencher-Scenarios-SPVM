@@ -1,3 +1,9 @@
+0.007   2022-11-23  Released-By: PERLANCAR; Urgency: medium
+
+        - Fix C code (though this does not significantly alter the
+          benchmark result).
+
+
 0.006   2022-11-23  Released-By: PERLANCAR; Urgency: medium
 
         - [bugfix] Specify dependency manually because dzil plugin
