@@ -1,3 +1,9 @@
+0.006   2022-11-23  Released-By: PERLANCAR; Urgency: medium
+
+        - [bugfix] Specify dependency manually because dzil plugin
+          DZP:Bencher::Scenario is not pulling it (RT#144796).
+
+
 0.005   2022-11-23  Released-By: PERLANCAR; Urgency: low
 
         - Merge Inline C code into the scenario source file.
