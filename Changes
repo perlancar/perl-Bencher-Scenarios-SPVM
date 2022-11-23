@@ -1,3 +1,8 @@
+0.005   2022-11-23  Released-By: PERLANCAR; Urgency: low
+
+        - Merge Inline C code into the scenario source file.
+
+
 0.004   2022-11-23  Released-By: PERLANCAR; Urgency: low
 
         - Tweak Abstract and require latest SPVM version.
