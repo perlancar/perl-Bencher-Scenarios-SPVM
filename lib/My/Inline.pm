@@ -24,3 +24,5 @@ our @EXPORT_OK = ('is_prime');
 
 1;
 # ABSTRACT: Example Inline code
+
+=for Pod::Coverage ^(.*)$

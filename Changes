@@ -1,3 +1,8 @@
+0.003   2022-11-23  Released-By: PERLANCAR; Urgency: medium
+
+        - Update benchmark, replace Sum with Prime.
+
+
 0.002   2017-08-04  Released-By: PERLANCAR
 
 	- Update to latest SPVM (no longer need to use SPVM::int or value()
