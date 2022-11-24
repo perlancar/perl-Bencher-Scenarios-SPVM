@@ -59,3 +59,8 @@ _
 
 Currently SPVM only offers ~2x speed-up in this case, and still an order of
 magnitude slower than C code.
+
+My general impression on SPVM (Nov 2022, v0.9662): the parser is currently still
+buggy (e.g. insignificant whitespace causing syntax error). 2x+ speed-up and
+native compilation are nice features. If the language proves to be convenient
+enough for Perl programmers, it might become a useful addition to their toolbox.
