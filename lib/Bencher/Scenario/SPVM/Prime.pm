@@ -18,14 +18,14 @@ our $scenario = {
         'SPVM::Examples' => {version=>'0.002'}, # to pull dependency
     },
     participants => [
-        { name => 'Inline::C', code => sub { My::Prime::Inline::is_prime(1_000_003) } },
-        { name => 'Perl',      code => sub { My::Prime->is_prime(1_000_003) } },
+        { name => 'Inline::C', code => sub { My::Prime::InlineC::is_prime(1_000_003) } },
+        { name => 'Perl',      code => sub { My::Prime::Perl->is_prime(1_000_003) } },
         { name => 'SPVM',      code => sub { SPVM::Examples::Prime->is_prime(1_000_003) } },
     ],
 };
 
 package
-    My::Prime;
+    My::Prime::Perl;
 
 sub is_prime {
     my $self = shift;
@@ -39,7 +39,7 @@ sub is_prime {
 }
 
 package
-    My::Prime::Inline;
+    My::Prime::InlineC;
 
 use Inline C => <<'_';
 int is_prime(int num) {
